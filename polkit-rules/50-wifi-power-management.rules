@@ -1,0 +1,10 @@
+polkit.addRule(function(action,subject){
+    if ( (action.id == "org.freedesktop.policykit.exec") &&
+         (action.lookup("user") == "root") &&
+         (action.lookup("program") == "/home/deck/.tools/wifi-set-power-save.sh") &&
+         (subject.isInGroup("wheel") ) )
+      return polkit.Result.YES;
+
+    return polkit.Result.NOT_HANDLED;
+  }
+);
