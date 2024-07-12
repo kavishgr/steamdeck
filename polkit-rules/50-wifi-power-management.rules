@@ -8,3 +8,5 @@ polkit.addRule(function(action,subject){
     return polkit.Result.NOT_HANDLED;
   }
 );
+
+// Ref: https://stackoverflow.com/questions/61480914/using-policykit-to-allow-non-root-users-to-start-and-stop-a-service
