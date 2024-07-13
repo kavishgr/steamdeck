@@ -36,4 +36,4 @@ wp-off -> pkexec $HOME/.tools/wifi-set-power-save.sh off
 
 ## Grub
 
-- [Disable UMIP](https://github.com/kavishgr/steamdeck/blob/main/grub-modifier-disable-umip.sh)
+- [Disable UMIP](https://github.com/kavishgr/steamdeck/blob/main/grub/grub-modifier-disable-umip.sh)
