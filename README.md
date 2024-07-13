@@ -3,16 +3,21 @@ Collection of scripts for my Steam Deck
 
 ## Decky Loader Plugins
 
-- [Bash Shortcuts](https://github.com/Tormak9970/bash-shortcuts) - This plugin can't use sudo
+- [Bash Shortcuts](https://github.com/Tormak9970/bash-shortcuts) 
 - [Storage Cleaner](https://github.com/mcarlucci/decky-storage-cleaner)
 - [Decky Terminal](https://github.com/Alex4386/decky-terminal)
 - [CheatDeck](https://github.com/SheffeyG/CheatDeck)
 
-## Polkit Rules
+## Polkit
 
-> Bash Shortcuts - 
+Reasons using polkit:
 
-Add rules in `/etc/polkit-1/rules.d/`:
+- Custom sudoers file is not being validated. Need to investigate. 
+- `sudo` doesn't work with **Bash Shortcuts**.
+
+> Add rules in `/etc/polkit-1/rules.d/`
+
+### Rules 
 
 - [49-sshd-nopassword.rules](https://github.com/kavishgr/steamdeck/blob/main/polkit-rules/49-sshd-nopassword.rules) - Able to run `systemctl start/stop sshd` without a password. 
 
