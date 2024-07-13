@@ -25,10 +25,10 @@ alias stop-ssh='systemctl stop sshd ; wp-off'
 
 In **Bash Shortcuts**:
 
-| Shortcut Name | Shortcut Command |
-| --- | --- |
-| start-ssh | systemctl start sshd |
-| stop-ssh | systemctl stop sshd |
+```
+start-ssh -> systemctl start sshd
+stop-ssh -> systemctl stop sshd
+```
 
 - [50-wifi-power-management.rules](https://github.com/kavishgr/steamdeck/blob/main/polkit-rules/50-wifi-power-management.rules) - Add [wifi-set-power-save.sh](https://github.com/kavishgr/steamdeck/blob/main/scripts/wifi-set-power-save.sh) in `$HOME/.tools`. Run the script with `pkexec`:
 
