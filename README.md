@@ -1,25 +1,34 @@
 # steamdeck
 Collection of scripts for my Steam Deck
 
-## Decky Loader
+## Decky Loader Plugins
 
-- [Bash Shortcuts](https://github.com/Tormak9970/bash-shortcuts)
+- [Bash Shortcuts](https://github.com/Tormak9970/bash-shortcuts) - This plugin can't use sudo
 - [Storage Cleaner](https://github.com/mcarlucci/decky-storage-cleaner)
 - [Decky Terminal](https://github.com/Alex4386/decky-terminal)
 - [CheatDeck](https://github.com/SheffeyG/CheatDeck)
 
 ## Polkit Rules
 
+> Bash Shortcuts - 
+
 Add rules in `/etc/polkit-1/rules.d/`:
 
-- [49-sshd-nopassword.rules](https://github.com/kavishgr/steamdeck/blob/main/polkit-rules/49-sshd-nopassword.rules) - Able to run `systemctl start/stop sshd` without password. 
+- [49-sshd-nopassword.rules](https://github.com/kavishgr/steamdeck/blob/main/polkit-rules/49-sshd-nopassword.rules) - Able to run `systemctl start/stop sshd` without a password. 
 
-Bash Shortcuts in Decky Loader:
+In **`.bashrc`** and **`.zshrc`**:
 
+```console
+alias start-ssh='systemctl start sshd ; wp-on'
+alias stop-ssh='systemctl stop sshd ; wp-off'
 ```
-start-ssh -> systemctl start sshd
-stop-ssh -> systemctl stop sshd
-```
+
+In **Bash Shortcuts**:
+
+| Shortcut Name | Shortcut Command |
+| --- | --- |
+| start-ssh | systemctl start sshd |
+| stop-ssh | systemctl stop sshd |
 
 - [50-wifi-power-management.rules](https://github.com/kavishgr/steamdeck/blob/main/polkit-rules/50-wifi-power-management.rules) - Add [wifi-set-power-save.sh](https://github.com/kavishgr/steamdeck/blob/main/scripts/wifi-set-power-save.sh) in `$HOME/.tools`. Run the script with `pkexec`:
 
@@ -27,7 +36,14 @@ stop-ssh -> systemctl stop sshd
 pkexec $HOME/.tools/wifi-set-power-save.sh on/off
 ```
 
-Bash Shortcuts in Decky Loader:
+In **`.bashrc`** and **`.zshrc`**:
+
+```console
+alias wp-on='pkexec $HOME/.tools/wifi-set-power-save.sh on'
+alias wp-off='pkexec $HOME/.tools/wifi-set-power-save.sh off'
+```
+
+In **Bash Shortcuts**:
 
 ```
 wp-on -> pkexec $HOME/.tools/wifi-set-power-save.sh on
