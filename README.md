@@ -3,7 +3,7 @@ Collection of scripts for my Steam Deck
 
 ## Decky Loader Plugins
 
-- [Bash Shortcuts](https://github.com/Tormak9970/bash-shortcuts) 
+- [Bash Shortcuts](https://github.com/Tormak9970/bash-shortcuts) (note: 16/03/25 not working)
 - [Storage Cleaner](https://github.com/mcarlucci/decky-storage-cleaner)
 - [Decky Terminal](https://github.com/Alex4386/decky-terminal)
 - [CheatDeck](https://github.com/SheffeyG/CheatDeck)
