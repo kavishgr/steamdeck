@@ -13,7 +13,7 @@ Collection of scripts for my Steam Deck
 
 Reasons using polkit:
 
-- Custom sudoers file is not being validated. [Need to investigate](https://github.com/ValveSoftware/SteamOS/issues/1826). 
+- ~~Custom sudoers file is not being validated~~. [Have to try this](https://github.com/ValveSoftware/SteamOS/issues/1826). 
 - `sudo` doesn't work with **Bash Shortcuts**.
 
 Add rules in `/etc/polkit-1/rules.d/`
